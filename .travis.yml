@@ -1,0 +1,14 @@
+language: java
+jdk:
+    -openjdk8
+addons:
+    apt:
+      packages:
+        ant
+    sonarcloud:
+    organization: EmDonato
+    token:
+        secure: 15372761d4af939423f7aff7e49213561fa2f611
+script:
+    - ant build
+    - sonar-scanner
